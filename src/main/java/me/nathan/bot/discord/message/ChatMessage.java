@@ -87,14 +87,19 @@ public class ChatMessage {
     }
 
     public String getMessage() {
-        String[] arrowSeparator = unformatted.split(">");
+        String[] arrowSeparatorGreen = unformatted.split(">");
+        String[] arrowSeparatorNormal = unformatted.split("> ", 2);
         String[] whisperSeparator = unformatted.split(": ");
 
         if(isToMessage()) return "-> " + whisperSeparator[1];
-        if(isGreenTextMessage()) return arrowSeparator[2];
+        if(isGreenTextMessage()) return arrowSeparatorGreen[2];
 
         if(isWhisperMessage()) return whisperSeparator[1];
-        if(isNormalMessage()) return arrowSeparator[1];
+        if(isNormalMessage())  {
+            Logger.info("ww");
+            Logger.info(arrowSeparatorNormal[0]);
+            return arrowSeparatorNormal[1];
+        }
         return unformatted;
     }
 

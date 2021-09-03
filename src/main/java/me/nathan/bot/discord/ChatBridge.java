@@ -91,7 +91,7 @@ public class ChatBridge implements Listenable {
         @Override
         public void run() {
             long time = System.currentTimeMillis();
-
+ 
             while (true) {
                 if(AccountManager.account == null) System.out.checkError();
                 if(AccountManager.account.client == null) System.out.checkError();
