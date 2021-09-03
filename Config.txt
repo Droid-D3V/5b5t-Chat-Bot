@@ -1,0 +1,7 @@
+email: [account email]
+password: [account password]
+host: [server ip]
+reconnectdelay: 5
+cooldown: 4
+token: [discord bot token]
+channel: [chat bridge channel]
